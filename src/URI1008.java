@@ -1,19 +1,22 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 public class URI1008 {
-	
+
 	public static void main(String[] args) {
-		Scanner sc = new Scanner (System.in);
-		
-		int NUMBER = sc.nextInt();
-		int HOURS = sc.nextInt();
-		double SalaryPerHour = sc.nextDouble();
-		double TotalSalary = HOURS*SalaryPerHour;
-		
-		System.out.println("NUMBER = "+ NUMBER);
-		System.out.printf("SALARY = U$ %.2f\n", TotalSalary);
-		
-		sc.close();
-	}
+	Locale.setDefault(Locale.US);
+	Scanner sc = new Scanner(System.in);
+
+	int F = sc.nextInt();
+	int HT = sc.nextInt();
+	double VH = sc.nextDouble();
+	double SALARY = HT * VH;
 	
+	System.out.println("NUMBER = "+F);
+	System.out.printf("SALARY = U$ %.2f\n", SALARY);
+	
+	sc.close();
+	
+	}
+
 }
