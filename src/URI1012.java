@@ -1,14 +1,11 @@
-import java.io.IOException;
 import java.util.Locale;
 import java.util.Scanner;
-import java.text.DecimalFormat;
 
 public class URI1012 {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 	Locale.setDefault(Locale.US);
 	Scanner sc = new Scanner(System.in);
-	DecimalFormat df = new DecimalFormat("0.000");
 	
 	double A = sc.nextDouble();
 	double B = sc.nextDouble();
@@ -21,11 +18,11 @@ public class URI1012 {
 	double QUADRADO = B * B; 
 	double RETANGULO = A * B;
 	
-	System.out.println("TRAINGULO: " + df.format(TRIANGULO));
-	System.out.println("CIRCULO: " + df.format(CIRCULO));
-	System.out.println("TRAPEZIO: " + df.format(TRAPEZIO));
-	System.out.println("QUADRADO: " + df.format(QUADRADO));
-	System.out.println("RETANGULO: " + df.format(RETANGULO));
+	System.out.printf("TRIANGULO: %.3f\n",TRIANGULO);
+	System.out.printf("CIRCULO: %.3f\n",CIRCULO);
+	System.out.printf("TRAPEZIO: %.3f\n",TRAPEZIO);
+	System.out.printf("QUADRADO: %.3f\n",QUADRADO);
+	System.out.printf("RETANGULO: %.3f\n",RETANGULO);
 	
 	sc.close();
 	

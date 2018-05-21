@@ -7,32 +7,31 @@ public class URI1101 {
 		
 		int M = sc.nextInt();
 		int N = sc.nextInt();
-		int sum = 0;
-		while (N > 0 || M > 0) {
-			
-			if (M == N) {
-				System.out.println("Sum=0");
-			
-			} else if (M > N) {
-							
+		
+		
+		while (N > 0 && M > 0) {
+			int sum = 0;	
+			if (M > N) {
 				while (M >= N) {
-					sum = sum + N;
-					N++;
+				sum = sum + N;
+					
 				System.out.print(N+" ");
-				}
+				N++;
+			}
 				System.out.println("Sum="+sum);
-			
+							
 			} else {
-								
 				while (N >= M) {
-					sum = sum + M;
-					M++;
+				sum = sum + M;
+					
 				System.out.print(M+" ");
-				}
+				M++;
+			}
 				System.out.println("Sum="+sum);
 			}
 			
-			
+			M = sc.nextInt();
+			N = sc.nextInt();
 		}
 	}
 }

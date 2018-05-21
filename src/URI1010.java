@@ -1,12 +1,11 @@
-import java.io.IOException;
+import java.util.Locale;
 import java.util.Scanner;
-import java.text.DecimalFormat;
 
 public class URI1010 {
-    public static void main(String[] args) throws IOException {
- 
+    public static void main(String[] args) {
+    	Locale.setDefault(Locale.US);
 		Scanner input = new Scanner(System.in);
-		DecimalFormat df = new DecimalFormat("0.00");
+
 		int CODIGO1, PECAS1;
 		int CODIGO2, PECAS2;
 		double VALOR1, VALOR2, VALOR;
@@ -20,7 +19,7 @@ public class URI1010 {
 
 		VALOR = PECAS1 * VALOR1 + PECAS2 * VALOR2;
 
-		System.out.println("VALOR A PAGAR: R$ " + df.format(VALOR));
+		System.out.printf("VALOR A PAGAR: R$ %.2f\n",VALOR);
 
     }
 }

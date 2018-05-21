@@ -10,28 +10,24 @@ public class codepitb {
 		
 		while (M > 0 && N > 0) {
 			
-			int somaparc = M + N;
+			int soma = M + N;
+			String somaS = soma+"";
 			String somafinal = "";
 			
-			somafinal+=somaparc;
-			
-			for (int i = somafinal.length(); i!=0;i--) {
+			for (int i = 0; i < somaS.length(); i++) {
 				
-				char zero = somafinal.charAt(i);
-				
-				if (zero == 0) {
-					
-				//NÂO CONSEGUI REMOVER UM "CHAR" DE UMA STRING
-				
+				if (somaS.charAt(i) != '0') {
+					somafinal+= somaS.charAt(i);
 				}
+				
+				
 			}
-						
 			System.out.println(somafinal);
 			M = sc.nextInt();
 			N = sc.nextInt();
+			
 		}
 		
-		sc.close();
 	}
 
 }
